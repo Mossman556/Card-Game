@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="Card_Game.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Card_Game"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- This sets up a grid layout for the elements on the page. -->
+    <Grid>
+        
+        <Grid.Background>
+            <!-- This sets the background image of the grid. -->
+            <ImageBrush ImageSource="Assets/background/background.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <!-- This sets up row definitions for the grid, with different heights. -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- This adds a TextBlock element to show the number of attempts. -->
+        <TextBlock
+            x:Name="AttemptsTextBlock"
+            Grid.Row="0"
+            Margin="10"
+            FontSize="24"
+            FontWeight="Bold"
+            Text="Attempts: 0"
+            HorizontalAlignment="Center" />
+        
+        <!-- This adds a Grid element to show the cards. -->
+        <Grid x:Name="CardGrid" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <!-- This adds a StackPanel element to hold the New Game and Show Cards buttons. -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="NewGameButton" Click="NewGameButton_Click" Content="New Game" Margin="10" />
+            <Button x:Name="ShowCardsButton" Click="ShowCardsButton_Click" Content="Show Cards" Margin="10" />
+        </StackPanel>
+    </Grid>
+</Page>

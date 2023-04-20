@@ -17,7 +17,7 @@ This is a simple memory matching card game developed for Windows using C# and XA
 * Visual Studio 2022
 * Windows Universal Platform (UWP)
 
-#Usage
+# Usage
 Clone the repository to your local machine
 Open the project in Visual Studio 
 Build and run the project to start the game
